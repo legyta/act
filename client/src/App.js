@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Axios from "axios";
+import UserContext from "./components/context/UserContext";
 import Header from "./components/layout/Header";
 import Index from "./components/pages/Index";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
-import UserContext from "./components/context/UserContext";
+import Vision from "./components/pages/Vision";
+import UserProfile from "./components/pages/UserProfile";
 import global from "./components/styling/global.css";
 
 export default function App() {
@@ -47,9 +49,11 @@ export default function App() {
           <Header />
           <div className="container">
             <Switch>
-              <Route exact path="/" component={Index} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
+              <Route exact path="/" component={Index} />
+              <Route path="/vision" component={Vision} />
+              <Route path="/profile" component={UserProfile} />
             </Switch>
           </div>
         </UserContext.Provider>

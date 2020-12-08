@@ -34,7 +34,7 @@ export default function Register() {
         user: loginResponse.data.user,
       });
       localStorage.setItem("auth-token", loginResponse.data.token);
-      history.push("/");
+      history.push("/profile");
     } catch (err) {
       err.response.data.msg && setError(err.response.data.msg);
     }
@@ -79,7 +79,12 @@ export default function Register() {
             type="text"
             onChange={(e) => setDisplayName(e.target.value)}
           />
-          <Button type="submit" variant="contained" color="primary">
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            size="small"
+          >
             Register
           </Button>
         </form>

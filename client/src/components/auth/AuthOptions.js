@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import Grid from "@material-ui/core/Grid";
+import Box from "@material-ui/core/Box";
 
 export default function AuthOptions() {
   const { userData, setUserData } = useContext(UserContext);
@@ -16,10 +17,11 @@ export default function AuthOptions() {
       user: undefined,
     });
     localStorage.setItem("auth-token", "");
+    history.push("/");
   };
 
   return (
-    <Grid direction="row" className="page">
+    <Box>
       <nav className="auth-options">
         {userData.user ? (
           <button onClick={logout}>Logout</button>
@@ -30,6 +32,6 @@ export default function AuthOptions() {
           </>
         )}
       </nav>
-    </Grid>
+    </Box>
   );
 }

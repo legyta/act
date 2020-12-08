@@ -31,10 +31,10 @@ export default function Login() {
         user: loginResponse.data.user,
       });
       localStorage.setItem("auth-token", loginResponse.data.token);
-      history.push("/");
-    } catch (err) {
-      //console.error(err);
-      //err.response.data.msg && setError(err.response.data.msg);
+      //  history.push("/profile");
+      window.location = "/profile";
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -47,10 +47,7 @@ export default function Login() {
       className="page"
     >
       <div className="page">
-        {/* {userData.user ? 
-        <h1>Welcome {userData.user.displayName}</h1> } */}
-
-        <h2>Login</h2>
+        <h1>Login</h1>
         {error && (
           <ErrorNotice message={error} clearError={() => setError(undefined)} />
         )}
