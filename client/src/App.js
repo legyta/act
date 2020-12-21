@@ -8,6 +8,7 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Vision from "./components/pages/Vision";
 import UserProfile from "./components/pages/UserProfile";
+import ForgotPassword from "./components/auth/ForgotPassword";
 import global from "./components/styling/global.css";
 
 export default function App() {
@@ -54,6 +55,7 @@ export default function App() {
               <Route exact path="/" component={Index} />
               <Route path="/vision" component={Vision} />
               <Route path="/profile" component={UserProfile} />
+              <Route path="/forgot-password" component={ForgotPassword} />
             </Switch>
           </div>
         </UserContext.Provider>
