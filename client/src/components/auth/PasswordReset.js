@@ -6,33 +6,31 @@ import ErrorNotice from "../misc/ErrorNotice";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 
-export default function Login() {
+export default function PasswordReset() {
   const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
   const [error, setError] = useState();
 
   const { setUserData } = useContext(UserContext);
   const { history } = useHistory();
 
-  const submit = async (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-
+    const passwordResetEmail = { email };
+    //  const email = email;
+    console.log(passwordResetEmail);
     try {
-      const loginUser = {
-        email,
-        password,
-      };
-      const loginResponse = await Axios.post(
-        "http://localhost:5000/users/login",
-        loginUser
+      // const passwordResetEmail = { email };
+      // const email = email;
+      //console.log(email);
+      const response = await Axios.post(
+        "http://localhost:5000/users/password-reset",
+        {
+          passwordResetEmail,
+        }
+        //  forgotPassword
       );
-      setUserData({
-        token: loginResponse.data.token,
-        user: loginResponse.data.user,
-      });
-      localStorage.setItem("auth-token", loginResponse.data.token);
-      //  history.push("/profile");
-      window.location = "/profile";
+      console.log(response.data);
+      //   window.location = "/login";
     } catch (error) {
       console.log(error);
     }
@@ -47,23 +45,17 @@ export default function Login() {
       className="page"
     >
       <div className="page">
-        <h1>Login</h1>
+        <h1>Forgot Password</h1>
         {error && (
           <ErrorNotice message={error} clearError={() => setError(undefined)} />
         )}
 
-        <form className="login-form" onSubmit={submit}>
-          <label htmlFor="login-email">Email</label>
+        <form className="reset-password-form" onSubmit={sendEmail}>
+          <label htmlFor="forgot-email">Email</label>
           <input
-            id="login-email"
+            id="forgot-email"
             type="email"
             onChange={(e) => setEmail(e.target.value)}
-          />
-          <label htmlFor="login-password">Password</label>
-          <input
-            id="login-password"
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
           />
           <Button
             type="submit"
@@ -71,9 +63,8 @@ export default function Login() {
             color="primary"
             size="small"
           >
-            Login
+            Reset Password
           </Button>
-          <a href="/password-reset">Forgot password?</a>
         </form>
       </div>
     </Grid>

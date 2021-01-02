@@ -108,4 +108,10 @@ router.get("/", auth, async (req, res) => {
   });
 });
 
+router.get("/password-reset", function (req, res) {
+  res.render("forgot-password", {
+    user: req.user,
+  });
+});
+
 module.exports = router;

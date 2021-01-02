@@ -36,7 +36,8 @@ export default function Register() {
       localStorage.setItem("auth-token", loginResponse.data.token);
       history.push("/profile");
     } catch (err) {
-      err.response.data.msg && setError(err.response.data.msg);
+      // err.response.data.msg && setError(err.response.data.msg);
+      console.log(err);
     }
   };
 
