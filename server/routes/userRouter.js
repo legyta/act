@@ -1,8 +1,13 @@
 const router = require("express").Router();
 const bcrypt = require("bcryptjs");
+const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
+const nodemailer = require("nodemailer");
+const sgMail = require("@sendgrid/mail");
 const auth = require("../middleware/auth");
 const User = require("../models/userModel");
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 router.post("/register", async (req, res) => {
   try {
