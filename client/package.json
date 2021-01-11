@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
+    "env-cmd": "^10.1.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-burger-menu": "^3.0.1",
@@ -19,7 +20,8 @@
   "proxy": "http://localhost:5000/",
   "scripts": {
     "start-client": "react-scripts start",
-    "build": "react-scripts build && (cd ../server && npm install)",
+    "build:dev": "env-cmd -e development react-scripts build && (cd ../server && npm install)",
+    "build": "env-cmd -e production react-scripts build && (cd ../server && npm install)",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "cd ../server && npm start"

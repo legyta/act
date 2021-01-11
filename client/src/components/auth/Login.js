@@ -6,6 +6,8 @@ import ErrorNotice from "../misc/ErrorNotice";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 
+const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
+
 export default function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -23,7 +25,7 @@ export default function Login() {
         password,
       };
       const loginResponse = await Axios.post(
-        "http://localhost:5000/users/login",
+        `${BASE_API_URL}/users/login`,
         loginUser
       );
       setUserData({

@@ -3,7 +3,8 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-      "build": "cd client && npm run build",
-      "start": "cd server && npm start"
+        "build:dev": "cd client && npm run build:dev",
+        "build": "cd client && npm run build",
+        "start": "cd server && npm start"
     }
 }

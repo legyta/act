@@ -6,6 +6,8 @@ import ErrorNotice from "../misc/ErrorNotice";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 
+const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
+
 export default function PasswordReset() {
   const [email, setEmail] = useState();
   const [error, setError] = useState();
@@ -23,7 +25,7 @@ export default function PasswordReset() {
       // const email = email;
       //console.log(email);
       const response = await Axios.post(
-        "http://localhost:5000/users/password-reset",
+        `${BASE_API_URL}/users/password-reset`,
         {
           passwordResetEmail,
         }

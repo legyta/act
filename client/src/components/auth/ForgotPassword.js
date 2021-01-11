@@ -6,6 +6,8 @@ import ErrorNotice from "../misc/ErrorNotice";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 
+const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
+
 export default function ForgotPassword() {
   const [email, setEmail] = useState();
   const [error, setError] = useState();
@@ -20,7 +22,7 @@ export default function ForgotPassword() {
       const forgotPassword = { email };
 
       await Axios.post(
-        "http://localhost:5000/users/forgot-password",
+        `${BASE_API_URL}/users/forgot-password`,
         forgotPassword
       );
 
