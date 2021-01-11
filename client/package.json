@@ -21,7 +21,7 @@
   "scripts": {
     "start-client": "react-scripts start",
     "build:dev": "env-cmd -e development react-scripts build && (cd ../server && npm install)",
-    "build": "env-cmd -e production react-scripts build && (cd ../server && npm install)",
+    "build": "npm install && env-cmd -e production react-scripts build && (cd ../server && npm install)",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "cd ../server && npm start"

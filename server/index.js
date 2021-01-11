@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const buildPath = path.join(__dirname, '..', 'build');
+const buildPath = path.join(__dirname, '../client/', 'build');
 app.use(express.static(buildPath));
 
 const PORT = process.env.PORT || 5000;
