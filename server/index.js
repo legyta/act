@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require('path');
 require("dotenv").config();
 
 // set up express
@@ -8,6 +9,9 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
 
 const PORT = process.env.PORT || 5000;
 
