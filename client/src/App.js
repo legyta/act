@@ -11,6 +11,8 @@ import UserProfile from "./components/pages/UserProfile";
 import PasswordReset from "./components/auth/PasswordReset";
 import global from "./components/styling/global.css";
 
+const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
+
 export default function App() {
   const [userData, setUserData] = useState({
     token: undefined,
@@ -25,13 +27,12 @@ export default function App() {
         token = "";
       }
       const tokenResponse = await Axios.post(
-        "http://localhost:5000/users/tokenIsValid",
+        `${BASE_API_URL}/users/tokenIsValid`,
         null,
         { headers: { "auth-token": token } }
       );
       if (tokenResponse.data) {
-        const userResponse = await Axios.get("http://localhost:5000/users/", {
-          headers: { "auth-token": token },
+        const userResponse = await Axios.get(`${BASE_API_URL}/users/`, {          headers: { "auth-token": token },
         });
         setUserData({
           token,

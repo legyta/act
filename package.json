@@ -1,0 +1,10 @@
+{
+    "name": "act-up",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build:dev": "cd client && npm run build:dev",
+        "build": "cd client && npm run build",
+        "start": "cd server && npm start"
+    }
+}
