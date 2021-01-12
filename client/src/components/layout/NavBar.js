@@ -1,27 +1,34 @@
-import React from "react";
-import { slide as Menu } from "react-burger-menu";
+import React, { Component } from "react";
+import "../styling/navbar.css";
+import { NavLink } from "react-router-dom";
 
-class NavBar extends React.Component {
-  showSettings(event) {
-    event.preventDefault();
-  }
-
+export default class NavBar extends Component {
   render() {
-    // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     return (
-      <Menu>
-        <a id="home" className="menu-item" href="/vision">
-          About
-        </a>
-        <a id="contact" className="menu-item" href="/contact">
-          Contact
-        </a>
-        <a onClick={this.showSettings} className="menu-item--small" href="">
-          Settings
-        </a>
-      </Menu>
+      <div className="menu-wrap">
+        <input type="checkbox" className="toggler" />
+        <div className="hamburger">
+          <div></div>
+        </div>
+        <div className="menu">
+          <div>
+            <div>
+              <ul>
+                <li>
+                  <NavLink to="/vision">
+                    <a>About</a>{" "}
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact">
+                    <a>Contact</a>{" "}
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
-
-export default NavBar;

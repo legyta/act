@@ -32,7 +32,8 @@ export default function App() {
         { headers: { "auth-token": token } }
       );
       if (tokenResponse.data) {
-        const userResponse = await Axios.get(`${BASE_API_URL}/users/`, {          headers: { "auth-token": token },
+        const userResponse = await Axios.get(`${BASE_API_URL}/users/`, {
+          headers: { "auth-token": token },
         });
         setUserData({
           token,
@@ -48,6 +49,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <UserContext.Provider value={{ userData, setUserData }}>
+          {/* <Header /> */}
           <Header />
           <div className="container">
             <Switch>
