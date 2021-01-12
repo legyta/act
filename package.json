@@ -6,8 +6,5 @@
         "build:dev": "cd client && npm run build:dev",
         "build": "cd client && npm run build",
         "start": "cd server && npm start"
-    },
-    "dependencies": {
-        "aws-sdk": "^2.825.0"
     }
 }
