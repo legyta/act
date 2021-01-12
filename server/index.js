@@ -19,12 +19,12 @@ app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
 
 // set up mongoose
 const aws = require("aws-sdk");
-let S3_KEY = new aws.S3({
-  MONGODB_CONNECTION_STRING: process.env.S3_KEY,
+let s3 = new aws.S3({
+  accessKeyId: process.env.S3_KEY,
 });
 
 mongoose.connect(
-  process.env.MONGODB_CONNECTION_STRING,
+  process.env.S3_KEY,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
