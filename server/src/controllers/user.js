@@ -1,5 +1,5 @@
 const { body, validationResult } = require('express-validator');
-const User = require("../../models/userModel");
+const User = require("../models/userModel");
 const bcrypt = require("bcryptjs");
 
 exports.validateRegister =
@@ -36,7 +36,7 @@ exports.validateRegister =
 
     ];
 
-exports.createUser = async (req, res, next) => {
+exports.register = async (req, res, next) => {
     try {
         const errors = validationResult(req); // Finds the validation errors in this request and wraps them in an object with handy functions
 
