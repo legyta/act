@@ -6,6 +6,8 @@ exports.validateRegister =
     [
         body('email')
             .exists()
+            .withMessage("Email was not in form").bail()
+            .notEmpty()
             .withMessage("Email does not exist").bail()
             .trim()
             .normalizeEmail()
@@ -51,9 +53,9 @@ exports.register = async (req, res, next) => {
         // })
         const user = {
             "test": "pass",
-            "email": email,
-            "pass": password,
-            "name": displayName
+            "email": "email_res",
+            "pass": "password_res",
+            "name": "displayName_res"
         }
 
         res.json(user)
