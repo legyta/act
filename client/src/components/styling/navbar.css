@@ -46,6 +46,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5px;
+  margin-left: 0px;
 }
 
 /* Hamburger Line */
@@ -136,9 +138,13 @@ body {
   transition: all 0.4s ease;
 }
 
-@media screen and (min-width: 1601px) {
+@media screen and (max-width: 1601px) {
   .menu-wrap .menu > div > div > ul > li a {
     font-size: 2rem;
+  }
+
+  .menu-wrap .hamburger {
+    margin-left: 10px;
   }
 }
 
@@ -146,6 +152,10 @@ body {
   .menu-wrap .menu > div {
     width: 100vw;
     height: 100vw;
+  }
+
+  .menu-wrap .hamburger {
+    margin-left: 0px;
   }
 }
 
@@ -158,6 +168,10 @@ body {
   .menu-wrap .menu > div > div > ul > li a {
     font-size: 2rem;
   }
+
+  .menu-wrap .hamburger {
+    margin-left: 0px;
+  }
 }
 
 @media screen and (min-width: 667px) and (max-width: 767px) {
@@ -165,12 +179,20 @@ body {
     width: 90vw;
     height: 90vw;
   }
+
+  .menu-wrap .hamburger {
+    margin-top: 5px;
+    margin-left: -20px;
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 666px) {
   .menu-wrap .menu > div {
     width: 140vw;
     height: 140vw;
+  }
+  .menu-wrap .hamburger {
+    margin-left: -20px;
   }
 }
 

@@ -40,7 +40,6 @@ p {
 a {
   color: #f21d1d;
   text-decoration: none;
-  margin-top: 10px;
 }
 
 button,
@@ -52,6 +51,12 @@ input[type="submit"] {
 }
 
 /* Header */
+
+.MuiBox-root-1 {
+  display: flex;
+  flex-direction: row;
+}
+
 #header {
   display: flex;
   flex-direction: row;
@@ -70,52 +75,100 @@ input[type="submit"] {
 }
 
 #header .auth-options {
-  height: 50%;
+  /* height: 50%; */
   display: flex;
   justify-content: right;
   align-items: center;
-  margin-left: 800px;
+  margin-left: 1200px;
+  margin-top: -10px;
+}
+
+.navBar {
+  display: flex;
+}
+
+.logo-image {
+  margin-top: 8px;
+  width: 20%;
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1601px) {
+  #header .auth-options {
+    margin-left: 740px;
+  }
+
+  .logo-image {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
   #header .auth-options {
-    margin-left: 740px;
+    margin-left: 540px;
+  }
+
+  .logo-image {
+    width: 40%;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   #header .auth-options {
-    margin-left: 480px;
+    margin-left: 320px;
+  }
+
+  .logo-image {
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 734px) and (max-width: 767px) {
   #header .auth-options {
-    margin-left: 440px;
+    margin-left: 300px;
+  }
+
+  .logo-image {
+    width: 40%;
   }
 }
 
 @media screen and (min-width: 684px) and (max-width: 733px) {
   #header .auth-options {
-    margin-left: 380px;
+    margin-left: 260px;
+  }
+
+  .logo-image {
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 667px) and (max-width: 683px) {
   #header .auth-options {
-    margin-left: 380px;
+    margin-left: 240px;
+  }
+
+  .logo-image {
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 412px) and (max-width: 666px) {
   #header .auth-options {
-    margin-left: 220px;
+    margin-left: 120px;
+  }
+
+  .logo-image {
+    width: 70%;
   }
 }
 
 @media screen and (min-width: 375px) and (max-width: 411px) {
   #header .auth-options {
-    margin-left: 180px;
+    margin-left: 80px;
+  }
+
+  .logo-image {
+    width: 80%;
   }
 }
 
@@ -137,14 +190,14 @@ input[type="submit"] {
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1600px) {
+/* @media screen and (min-width: 1025px) and (max-width: 1600px) {
   .logo-image img {
     width: 5%;
   }
   .MuiGrid-justify-xs-center {
     margin-top: 40px;
   }
-}
+} */
 
 /* Hamburger Menu */
 /* Position and sizing of burger button */
@@ -175,7 +228,7 @@ input[type="submit"] {
 }
 .MuiBox-root-3 {
   margin-left: 0px;
-  padding: 1rem;
+  padding: 0rem;
 }
 
 .vision-vision h1 {

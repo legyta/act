@@ -21,8 +21,8 @@ export default function AuthOptions() {
   };
 
   return (
-    <Box>
-      <nav className="auth-options">
+    <Box className="auth-options">
+      <nav className="navBar">
         {userData.user ? (
           <button onClick={logout}>Logout</button>
         ) : (

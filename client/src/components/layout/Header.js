@@ -11,19 +11,17 @@ import NavBar from "./NavBar";
 export default function Header() {
   return (
     <Grid container id="header" flexDirection="row">
-      <Box>
-        <Box container id="logo">
+      <Box width="100%">
+        <Box width="20%">
           <a href="/">
-            <img
-              style={{ width: "6%" }}
-              src={actLogo}
-              alt="logo"
-              className="logo-image"
-            />
+            <img src={actLogo} alt="logo" className="logo-image" />
           </a>
+
+          <NavBar />
         </Box>
-        <NavBar />
-        <AuthOptions />
+        <Box width="80%" marginTop="20px">
+          <AuthOptions />
+        </Box>
       </Box>
     </Grid>
   );
