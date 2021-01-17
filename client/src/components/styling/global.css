@@ -74,7 +74,7 @@ input[type="submit"] {
   display: flex;
   justify-content: right;
   align-items: center;
-  margin-left: 1000px;
+  margin-left: 800px;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
@@ -139,7 +139,7 @@ input[type="submit"] {
 
 @media screen and (min-width: 1025px) and (max-width: 1600px) {
   .logo-image img {
-    width: 8%;
+    width: 5%;
   }
   .MuiGrid-justify-xs-center {
     margin-top: 40px;

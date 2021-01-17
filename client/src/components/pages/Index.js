@@ -18,7 +18,7 @@ export default function Index() {
       alignItems="left"
       className="page"
     >
-      <Header />
+      {/* <Header /> */}
       {/* {userData.user ? (
         <h1>Welcome {userData.user.displayName}</h1>
       ) : ( */}

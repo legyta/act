@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 export default class NavBar extends Component {
   render() {
     return (
-      <Box className="menu-wrap">
+      <Box className="menu-wrap" style={{ marginLeft: "80px" }}>
         <input type="checkbox" className="toggler" />
         <Box className="hamburger">
           <div></div>
