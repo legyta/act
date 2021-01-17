@@ -10,7 +10,7 @@ const User = require("../models/userModel");
 //controllers
 const userController = require("../controllers/user")
 
-// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 
 router.post("/register", userController.validateRegister, userController.register)
