@@ -18,11 +18,15 @@ export default function Vision() {
       alignItems="left"
       className="page"
     >
+      <Header />
       {/* {userData.user ? (
         <h1>Welcome {userData.user.displayName}</h1>
       ) : ( */}
-      <>
-        <Box style={{ display: "flex", flexDirection: "row" }}>
+      <Box className="vision-page">
+        <Box
+          className="vision-card"
+          style={{ display: "flex", flexDirection: "row" }}
+        >
           <Box className="vision-vision">
             <h1>Vision</h1>
             <h2>Subtitle</h2>
@@ -39,7 +43,10 @@ export default function Vision() {
           </Box>
         </Box>
 
-        <Box style={{ display: "flex", flexDirection: "row" }}>
+        <Box
+          className="mission-card"
+          style={{ display: "flex", flexDirection: "row" }}
+        >
           <Box direction="column" justify="center" alignItems="right">
             <img
               style={{ marginRight: "20px" }}
@@ -55,7 +62,10 @@ export default function Vision() {
           </Box>
         </Box>
 
-        <Box style={{ display: "flex", flexDirection: "row" }}>
+        <Box
+          className="values-card"
+          style={{ display: "flex", flexDirection: "row" }}
+        >
           <Box className="vision-values">
             <h1>Values</h1>
             <h2>Subtitle</h2>
@@ -71,8 +81,7 @@ export default function Vision() {
             />
           </Box>
         </Box>
-      </>
-      {/* )} */}
+      </Box>
     </Grid>
   );
 }

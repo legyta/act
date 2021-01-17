@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
 import UserContext from "../context/UserContext";
 import Grid from "@material-ui/core/Grid";
+import Header from "../layout/Header";
 
 export default function UserProfile() {
   const { userData, setUserData } = useContext(UserContext);
 
   return (
     <Grid direction="row" className="page">
+      <Header />
       <nav className="auth-options">
         {!userData.user ? (
           <h2>

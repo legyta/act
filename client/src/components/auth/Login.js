@@ -2,9 +2,11 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import Axios from "axios";
+import Box from "@material-ui/core/Box";
 import ErrorNotice from "../misc/ErrorNotice";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import Header from "../layout/Header";
 
 const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
 
@@ -48,7 +50,8 @@ export default function Login() {
       alignItems="left"
       className="page"
     >
-      <div className="page">
+      <Header />
+      <Box className="login-page">
         <h1>Login</h1>
         {error && (
           <ErrorNotice message={error} clearError={() => setError(undefined)} />
@@ -77,7 +80,7 @@ export default function Login() {
           </Button>
           <a href="/password-reset">Forgot password?</a>
         </form>
-      </div>
+      </Box>
     </Grid>
   );
 }
