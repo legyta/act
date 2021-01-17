@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <Grid container id="header" flexDirection="row">
       <Box>
-        {/* <Logo /> */}
+        <Logo />
         <NavBar />
         <AuthOptions />
       </Box>

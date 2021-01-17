@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import "../styling/navbar.css";
 import { NavLink } from "react-router-dom";
+import Box from "@material-ui/core/Box";
 
 export default class NavBar extends Component {
   render() {
     return (
-      <div className="menu-wrap">
+      <Box className="menu-wrap">
         <input type="checkbox" className="toggler" />
-        <div className="hamburger">
+        <Box className="hamburger">
           <div></div>
-        </div>
-        <div className="menu">
-          <div>
-            <div>
+        </Box>
+        <Box className="menu">
+          <Box>
+            <Box>
               <ul>
                 <li>
                   <NavLink to="/vision">
@@ -25,10 +26,10 @@ export default class NavBar extends Component {
                   </NavLink>
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     );
   }
 }

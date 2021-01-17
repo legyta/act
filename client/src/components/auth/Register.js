@@ -5,6 +5,7 @@ import Axios from "axios";
 import ErrorNotice from "../misc/ErrorNotice";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import Header from "../layout/Header";
 
 const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
 
@@ -24,13 +25,10 @@ export default function Register() {
     try {
       const newUser = { email, password, passwordCheck, displayName };
       await Axios.post(`${BASE_API_URL}/users/register`, newUser);
-      const loginResponse = await Axios.post(
-        `${BASE_API_URL}/users/login`,
-        {
-          email,
-          password,
-        }
-      );
+      const loginResponse = await Axios.post(`${BASE_API_URL}/users/login`, {
+        email,
+        password,
+      });
       setUserData({
         token: loginResponse.data.token,
         user: loginResponse.data.user,
@@ -51,6 +49,7 @@ export default function Register() {
       alignItems="left"
       className="page"
     >
+      <Header />
       <div className="page">
         <h1>Register</h1>
         {error && (

@@ -5,6 +5,7 @@ import Axios from "axios";
 import ErrorNotice from "../misc/ErrorNotice";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import Header from "../layout/Header";
 
 const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
 
@@ -48,6 +49,7 @@ export default function Login() {
       alignItems="left"
       className="page"
     >
+      <Header />
       <div className="page">
         <h1>Login</h1>
         {error && (
