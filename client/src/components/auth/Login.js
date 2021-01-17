@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import Axios from "axios";
+import Box from "@material-ui/core/Box";
 import ErrorNotice from "../misc/ErrorNotice";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -50,7 +51,7 @@ export default function Login() {
       className="page"
     >
       <Header />
-      <div className="page">
+      <Box className="login-page">
         <h1>Login</h1>
         {error && (
           <ErrorNotice message={error} clearError={() => setError(undefined)} />
@@ -79,7 +80,7 @@ export default function Login() {
           </Button>
           <a href="/password-reset">Forgot password?</a>
         </form>
-      </div>
+      </Box>
     </Grid>
   );
 }

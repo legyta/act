@@ -128,8 +128,8 @@ body {
 .menu-wrap .menu > div {
   background: #5ad1db;
   border-radius: 70%;
-  width: 90vw;
-  height: 90vw;
+  width: 65vw;
+  height: 65vw;
   display: flex;
   flex: none;
   align-items: center;
@@ -150,8 +150,8 @@ body {
 
 @media screen and (min-width: 1024px) and (max-width: 1025px) {
   .menu-wrap .menu > div {
-    width: 100vw;
-    height: 100vw;
+    width: 80vw;
+    height: 80vw;
   }
 
   .menu-wrap .hamburger {
@@ -161,8 +161,8 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .menu-wrap .menu > div {
-    width: 120vw;
-    height: 120vw;
+    width: 100vw;
+    height: 100vw;
   }
 
   .menu-wrap .menu > div > div > ul > li a {
@@ -176,8 +176,8 @@ body {
 
 @media screen and (min-width: 667px) and (max-width: 767px) {
   .menu-wrap .menu > div {
-    width: 90vw;
-    height: 90vw;
+    width: 75vw;
+    height: 75vw;
   }
 
   .menu-wrap .hamburger {
@@ -188,8 +188,8 @@ body {
 
 @media screen and (min-width: 375px) and (max-width: 666px) {
   .menu-wrap .menu > div {
-    width: 140vw;
-    height: 140vw;
+    width: 120vw;
+    height: 120vw;
   }
   .menu-wrap .hamburger {
     margin-left: -20px;

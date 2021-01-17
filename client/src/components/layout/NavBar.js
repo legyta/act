@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "../styling/navbar.css";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Vision from "../pages/Vision";
 import Box from "@material-ui/core/Box";
 
 export default class NavBar extends Component {
@@ -16,14 +18,14 @@ export default class NavBar extends Component {
             <Box>
               <ul>
                 <li>
-                  <NavLink to="/vision">
+                  <Link to="/vision">
                     <a>About</a>{" "}
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink to="/contact">
+                  <Link to="/contact">
                     <a>Contact</a>{" "}
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </Box>

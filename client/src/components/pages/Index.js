@@ -18,13 +18,14 @@ export default function Index() {
       alignItems="left"
       className="page"
     >
-      {/* <Header /> */}
+      <Header />
       {/* {userData.user ? (
         <h1>Welcome {userData.user.displayName}</h1>
       ) : ( */}
-      <>
-        {/* <img src={Title} alt="index-image" className="index-image" /> */}
-      </>
+
+      <Box className="index-page">
+        <img src={Title} alt="index-image" className="index-image" />
+      </Box>
       {/* )} */}
     </Grid>
   );
