@@ -10,7 +10,6 @@ exports.validateRegister =
             .notEmpty()
             .withMessage("Email does not exist").bail()
             .trim()
-            .normalizeEmail()
             .isEmail()
             .withMessage('Invalid Email').bail()
             .custom(emailNotInUse),
@@ -20,19 +19,21 @@ exports.validateRegister =
             .withMessage('Passwords must match').bail()
             .trim()
             .isLength({ min: 5 })
-            .withMessage('Password Must Be at Least 8 Characters')
+            .withMessage('Password Must Be at Least 5 Characters')
             .matches('[0-9]')
             .withMessage('Password Must Contain a Number')
             .matches('[A-Z]')
-            .withMessage('Password Must Contain an Uppercase Letter').bail()
+            .withMessage('Password Must Contain an Uppercase Letter')
+            .matches('[a-z]')
+            .withMessage('Password Must Contain a Lowercase Letter').bail()
             .customSanitizer(async (value) => {
                 const salt = await bcrypt.genSalt();
                 return passwordHash = await bcrypt.hash(value, salt);
             }),
 
         body('displayName')
-            .exists()
-            .withMessage("you need a dsiaply name").bail()
+            .notEmpty()
+            .withMessage("Display Name does not exist").bail()
             .custom(userNameNotInUse)
             .trim()
 
@@ -40,7 +41,7 @@ exports.validateRegister =
 
 exports.register = async (req, res, next) => {
     try {
-        const errors = validationResult(req); // Finds the validation errors in this request and wraps them in an object with handy functions
+        const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
             res.status(422).json({ errors: errors.array() });
