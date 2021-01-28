@@ -3,6 +3,7 @@ import Box from "@material-ui/core/Box";
 import landingPage1 from "../images/landingPage2.jpg";
 import landingPage2 from "../images/landingPage2.jpg";
 import landingPage3 from "../images/landingPage3.jpg";
+import slider from "../styling/slider.css";
 
 const ImageSlider = ({ images }) => {
   const [index, setIndex] = useState(0);
@@ -22,7 +23,10 @@ const ImageSlider = ({ images }) => {
 
   return (
     images.length > 0 && (
-      <Box style={{ display: "flex", alignItems: "centre" }}>
+      <Box
+        className="sliderBox"
+        style={{ display: "flex", alignItems: "centre" }}
+      >
         <Box
           className="arrows"
           style={{

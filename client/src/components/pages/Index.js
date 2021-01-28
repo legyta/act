@@ -6,6 +6,7 @@ import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Title from "../images/Title.png";
 import Header from "../layout/Header";
+import Footer from "../layout/Footer";
 import ImageSlider from "../pieces/ImageSlider";
 import landingPage1 from "../images/landingPage1.jpg";
 import landingPage2 from "../images/landingPage2.jpg";
@@ -37,6 +38,7 @@ export default function Index() {
         />
       </Box>
       {/* )} */}
+      <Footer />
     </Grid>
   );
 }
