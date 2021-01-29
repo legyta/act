@@ -7,6 +7,8 @@ import ErrorNotice from "../misc/ErrorNotice";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Header from "../layout/Header";
+import Footer from "../layout/Footer";
+import login from "../styling/login.css";
 
 const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
 
@@ -81,6 +83,7 @@ export default function Login() {
           <a href="/password-reset">Forgot password?</a>
         </form>
       </Box>
+      <Footer />
     </Grid>
   );
 }
