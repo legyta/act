@@ -10,12 +10,23 @@ import NavBar from "./NavBar";
 
 export default function Footer() {
   return (
-    <Grid container id="footer" flexDirection="row">
-      <Box className="footer-box" width="100%">
-        <Box width="20%">
+    <Grid container id="footer" flexDirection="row" alignItems="centre">
+      <Box className="footer-box">
+        <Box className="footer-logo">
+          {" "}
           <a href="/">
             <img src={actLogo} alt="logo" className="logo-image" />
           </a>
+        </Box>
+        <Box className="register">
+          <Box>
+            <a href="/register">Start action</a>
+            <br></br>
+            <a href="/login">Join us</a>
+          </Box>
+        </Box>
+        <Box className="rights">
+          &copy;{new Date().getFullYear()} Act <br></br> All Rights Reserved
         </Box>
       </Box>
     </Grid>

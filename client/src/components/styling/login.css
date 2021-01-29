@@ -1,0 +1,77 @@
+/* Login page */
+
+.login-page {
+  padding: 3rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.MuiButton-containedPrimary {
+  background-color: #528540 !important;
+  margin-top: 20px !important;
+  width: 15%;
+}
+
+.login-page {
+  padding: 3rem;
+  min-height: 78.3vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1601px) and (max-width: 2400px) {
+  .login-page {
+    min-height: 84vh;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+  .login-form {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .login-page {
+    min-height: 84vh;
+  }
+  .login-form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 734px) and (max-width: 767px) {
+  .login-form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 684px) and (max-width: 733px) {
+  .login-form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 667px) and (max-width: 683px) {
+  .login-form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 414px) and (max-width: 415px) {
+  .login-page {
+    min-height: 78vh;
+  }
+}
+
+@media screen and (min-width: 412px) and (max-width: 413px) {
+  .login-page {
+    min-height: 77.3vh;
+  }
+}
