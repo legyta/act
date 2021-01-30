@@ -44,22 +44,21 @@ exports.register = async (req, res, next) => {
         const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
+            console.log(req)
             res.status(422).json({ errors: errors.array() });
             return;
         }
-        // const user = await User.create({
-        //     req.body.email,
-        //     password: passwordHash,
-        //     req.body.displayName
-        // })
-        const user = {
-            "test": "pass",
-            "email": "email_res",
-            "pass": "password_res",
-            "name": "displayName_res"
-        }
+        let { email, password, _, displayName } = req.body;
+        
+        const newUser = await User.create({
+            email,
+            password,
+            displayName
+        })
 
-        res.json(user)
+        const savedUser = await newUser.save();
+        res.json(savedUser);
+
     } catch (err) {
         return next(err)
     }
