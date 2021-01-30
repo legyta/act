@@ -1,0 +1,84 @@
+.images img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.arrows .MuiSvgIcon-root {
+  color: #5ad1db;
+  height: 1em;
+}
+
+.arrows .arrowRight {
+  margin-left: 280px;
+  font-size: 2.2rem;
+}
+
+.arrows .MuiSvgIcon-root:hover {
+  color: #eb2e18;
+}
+
+.arrows .arrowLeft {
+  font-size: 2.2rem;
+}
+
+@media screen and (min-width: 1601px) and (max-width: 2400px) {
+  .arrows .arrowRight {
+    margin-left: 1766px;
+    font-size: 3.6rem;
+  }
+  .arrows .arrowLeft {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (min-width: 1026px) and (max-width: 1600px) {
+  .arrows .arrowRight {
+    margin-left: 1154px;
+    font-size: 2.8rem;
+  }
+  .arrows .arrowLeft {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1025px) {
+  .arrows .arrowRight {
+    margin-left: 920px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .arrows .arrowRight {
+    margin-left: 676px;
+  }
+}
+
+@media screen and (min-width: 734px) and (max-width: 767px) {
+  .arrows .arrowRight {
+    margin-left: 625px;
+  }
+}
+
+@media screen and (min-width: 684px) and (max-width: 733px) {
+  .arrows .arrowRight {
+    margin-left: 572px;
+  }
+}
+
+@media screen and (min-width: 667px) and (max-width: 683px) {
+  .arrows .arrowRight {
+    margin-left: 560px;
+  }
+}
+
+@media screen and (min-width: 414px) and (max-width: 415px) {
+  .arrows .arrowRight {
+    margin-left: 320px;
+  }
+}
+
+@media screen and (min-width: 412px) and (max-width: 413px) {
+  .arrows .arrowRight {
+    margin-left: 320px;
+  }
+}

@@ -1,0 +1,62 @@
+.index-page {
+  padding: 0rem;
+  min-height: 78.3vh;
+}
+
+@media screen and (min-width: 1601px) and (max-width: 2400px) {
+  .index-page {
+    min-height: 144vh;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
+  .index-page {
+    min-height: 150vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .index-page {
+    min-height: 84vh;
+  }
+}
+
+@media screen and (min-width: 734px) and (max-width: 767px) {
+  .index-page {
+    min-height: 144vh;
+  }
+}
+
+@media screen and (min-width: 684px) and (max-width: 733px) {
+  .index-page {
+    min-height: 124vh;
+  }
+}
+
+@media screen and (min-width: 667px) and (max-width: 683px) {
+  .index-page {
+    min-height: 134vh;
+  }
+}
+
+@media screen and (min-width: 414px) and (max-width: 415px) {
+  .index-page {
+    min-height: 78vh;
+  }
+}
+
+@media screen and (min-width: 412px) and (max-width: 413px) {
+  .index-page {
+    min-height: 77.3vh;
+  }
+}
+
+.index-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.arrows {
+  margin-top: 20%;
+}

@@ -5,7 +5,9 @@ import UserContext from "../context/UserContext";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Header from "../layout/Header";
+import Footer from "../layout/Footer";
 import visionHands from "../images/visionHands.svg";
+import vision from "../styling/vision.css";
 
 export default function Vision() {
   const { userData } = useContext(UserContext);
@@ -82,6 +84,7 @@ export default function Vision() {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </Grid>
   );
 }
