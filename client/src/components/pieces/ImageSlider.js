@@ -4,6 +4,8 @@ import landingPage1 from "../images/landingPage2.jpg";
 import landingPage2 from "../images/landingPage2.jpg";
 import landingPage3 from "../images/landingPage3.jpg";
 import slider from "../styling/slider.css";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 const ImageSlider = ({ images }) => {
   const [index, setIndex] = useState(0);
@@ -34,21 +36,13 @@ const ImageSlider = ({ images }) => {
             display: "flex",
             flexDirection: "row",
             position: "absolute",
+            padding: ".6rem",
+            marginTop: "26%",
           }}
         >
-          <button
-            style={{ fontSize: "3rem", color: "#5ad1db" }}
-            onClick={slideLeft}
-          >
-            {" "}
-            {"<"}
-          </button>
-          <button
-            style={{ fontSize: "3rem", color: "#5ad1db" }}
-            onClick={slideRight}
-          >
-            {">"}
-          </button>
+          {" "}
+          <ArrowBackIosIcon onClick={slideLeft} className="arrowLeft" />
+          <ArrowForwardIosIcon onClick={slideRight} className="arrowRight" />
         </Box>
         <Box className="images">
           <img
