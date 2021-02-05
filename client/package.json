@@ -25,7 +25,8 @@
     "build": "npm install && env-cmd -e production react-scripts build && (cd ../server && npm install)",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "cd ../server && npm start"
+    "start": "cd ../server && npm start",
+    "start:dev": "env-cmd -e development react-scripts start"
   },
   "eslintConfig": {
     "extends": [

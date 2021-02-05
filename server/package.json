@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "client": "cd ../client && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\" ",
-    "test": "mocha"
+    "test": "mocha",
+    "start:dev": "set NODE_ENV=dev && node src/index.js"
   },
   "keywords": [],
   "author": "",

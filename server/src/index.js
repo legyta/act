@@ -13,8 +13,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const buildPath = path.join(__dirname, "../../client", "build");
-app.use(express.static(buildPath));
+if (process?.env?.NODE_ENV?.trim() === 'dev'){
+    console.log('dev')
+}else{
+    const buildPath = path.join(__dirname, "../../client", "build");
+    app.use(express.static(buildPath));
+}
+
 
 const PORT = process.env.PORT || 5000;
 
